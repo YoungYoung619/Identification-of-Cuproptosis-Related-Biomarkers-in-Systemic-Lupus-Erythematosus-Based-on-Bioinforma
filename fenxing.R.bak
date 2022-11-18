@@ -1,0 +1,36 @@
+
+
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+#BiocManager::install("ConsensusClusterPlus")
+
+
+library(ConsensusClusterPlus)        #引用包
+cellFile="37tong.txt"     #免疫细胞输入文件
+workDir="D:\\Maney\\SLE\\GSE126307\\fenxing"     #工作目录
+setwd(workDir)       #设置工作目录
+
+#读取输入文件
+data=read.table(cellFile, header=T, sep="\t", check.names=F, row.names=1)
+data=t(data)
+
+#聚类
+maxK=9
+results=ConsensusClusterPlus(data,
+              maxK=maxK,
+              reps=50,
+              pItem=0.8,
+              pFeature=1,
+              title=workDir,
+              clusterAlg="km",
+              distance="euclidean",
+              seed=123456,
+              plot="png")
+
+
+#输出结果
+clusterNum=3        #分几类，根据判断标准判断
+cluster=results[[clusterNum]][["consensusClass"]]
+write.table(cluster,file="ICIcluster.txt",sep="\t",quote=F,col.names=F)
+
+

@@ -1,0 +1,12 @@
+setwd("E:\\GEO\\GEO\\bingo\\06.CIBERSORT")
+  source("Cibersort.R")
+  
+  # Define LM22 file
+  LM22.file <- "ref.txt"
+  exp.file <- "normalize.txt"
+  
+  TME.results = CIBERSORT(LM22.file, exp.file, perm = 1000, QN = TRUE)
+  
+  # output CIBERSORT results
+  write.table(TME.results, "TME.results.output.txt", 
+              sep = "\t", row.names = T, col.names = T, quote = F)
