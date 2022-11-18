@@ -1,7 +1,7 @@
 # Identification-of-Cuproptosis-Related-Biomarkers-in-Systemic-Lupus-Erythematosus-Based-on-Bioinforma
 
 ## Introduction
-This package is the implementation of Identification of Cuproptosis-Related Biomarkers in Systemic Lupus Erythematosus Based on Bioinformatics Analysis and Machine Learning, all the results of out manuscript could be repeated via this package.
+This package is the implementation of Identification of Cuproptosis-Related Biomarkers in Systemic Lupus Erythematosus Based on Bioinformatics Analysis and Machine Learning, all the results of our manuscript could be repeated via this package.
 
 ## Citations
 If this package is helpful to your research, please cite this below.
