@@ -13,4 +13,4 @@ If this package is helpful to your research, please cite this below.
 }
 ```
 
-if you have ange questions, please feel free to contact us
+if you have any questions, please feel free to contact us
